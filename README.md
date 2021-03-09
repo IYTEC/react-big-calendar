@@ -1,4 +1,4 @@
-# react-big-calendar
+# react-big-calendar-scheduler
 
 An events calendar component built for React and made for modern browsers (read: IE10+) and uses flexbox over the classic tables-ception approach.
 
@@ -10,7 +10,7 @@ Inspired by [Full Calendar](http://fullcalendar.io/).
 
 ## Use and Setup
 
-`yarn add react-big-calendar` or `npm install --save react-big-calendar-scheduler`
+`yarn add react-big-calendar-scheduler` or `npm install --save react-big-calendar-scheduler`
 
 Include `react-big-calendar/lib/css/react-big-calendar.css` for styles, and make sure your calendar's container
 element has a height, or the calendar won't be visible. To provide your own custom styling, see the [Custom Styling](#custom-styling) topic.
