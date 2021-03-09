@@ -1,35 +1,33 @@
-import React from 'react'
-import Api from './Api'
-import Intro from './Intro.md'
-import { render } from 'react-dom'
-import Layout from 'react-tackle-box/Layout'
-
-import localizer from 'react-big-calendar/lib/localizers/globalize'
-import globalize from 'globalize'
-
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
-
 import 'react-big-calendar/lib/sass/styles.scss'
 import './styles.scss'
 import './prism.scss'
-import Card from './Card'
-import ExampleControlSlot from './ExampleControlSlot'
-import Basic from './demos/basic'
+
+import Api from './Api'
 import BackgroundEvents from './demos/backgroundEvents'
-import Selectable from './demos/selectable'
+import Basic from './demos/basic'
+import Card from './Card'
 import CreateEventWithNoOverlap from './demos/createEventWithNoOverlap'
 import Cultures from './demos/cultures'
-import Popup from './demos/popup'
-import Rendering from './demos/rendering'
 import CustomView from './demos/customView'
-import Resource from './demos/resource'
-import DndResource from './demos/dndresource'
-import Timeslots from './demos/timeslots'
 import Dnd from './demos/dnd'
 import DndOutsideSource from './demos/dndOutsideSource'
+import DndResource from './demos/dndresource'
 import Dropdown from 'react-bootstrap/lib/Dropdown'
+import ExampleControlSlot from './ExampleControlSlot'
+import Intro from './Intro.md'
+import Layout from 'react-tackle-box/Layout'
 import MenuItem from 'react-bootstrap/lib/MenuItem'
+import Popup from './demos/popup'
+import React from 'react'
+import Rendering from './demos/rendering'
+import Resource from './demos/resource'
+import Selectable from './demos/selectable'
+import Timeslots from './demos/timeslots'
+import globalize from 'globalize'
+import localizer from 'react-big-calendar/lib/localizers/globalize'
+import { render } from 'react-dom'
 
 const globalizeLocalizer = localizer(globalize)
 
@@ -93,7 +91,7 @@ class Example extends React.Component {
     return (
       <div className="app">
         <div className="jumbotron">
-          <div className="container">
+          {/* <div className="container">
             <h1>
               Big Calendar <i className="fa fa-calendar" />
             </h1>
@@ -114,7 +112,7 @@ class Example extends React.Component {
                 <i className="fa fa-github" /> github
               </a>
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="examples">
           <Card className="examples--header">
@@ -160,10 +158,10 @@ class Example extends React.Component {
           </div>
         </div>
         <div className="docs">
-          <div className="contain section">
+          {/* <div className="contain section">
             <Intro />
           </div>
-          <Api className="contain section" />
+          <Api className="contain section" /> */}
         </div>
       </div>
     )
