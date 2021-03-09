@@ -10,7 +10,7 @@ Inspired by [Full Calendar](http://fullcalendar.io/).
 
 ## Use and Setup
 
-`yarn add react-big-calendar` or `npm install --save react-big-calendar`
+`yarn add react-big-calendar` or `npm install --save react-big-calendar-scheduler`
 
 Include `react-big-calendar/lib/css/react-big-calendar.css` for styles, and make sure your calendar's container
 element has a height, or the calendar won't be visible. To provide your own custom styling, see the [Custom Styling](#custom-styling) topic.
