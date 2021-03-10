@@ -1,6 +1,6 @@
 {
   "name": "react-big-calendar-scheduler",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Calendar! with events",
   "author": {
     "name": "Ikechi Adolphus",
@@ -148,5 +148,5 @@
   },
   "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/IYTEC/react-big-calendar#readme",
-  "_id": "react-big-calendar-scheduler@0.1.0"
+  "_id": "react-big-calendar-scheduler@0.1.1"
 }
