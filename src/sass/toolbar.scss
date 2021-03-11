@@ -37,6 +37,11 @@ $active-border: darken($btn-border, 12%);
       box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
       background-color: $active-background;
       border-color: $active-border;
+      // padding: 1rem;
+      // background: #EAF1FE;
+      // border-right: 0.5px solid #CCD5E1;
+      // width: 8rem;
+      // text-align: center;
 
       &:hover,
       &:focus {
@@ -61,8 +66,29 @@ $active-border: darken($btn-border, 12%);
 }
 
 .rbc-btn-group {
-  display: inline-block;
-  white-space: nowrap;
+  // display: inline-block;
+  // white-space: nowrap;
+  display: flex;
+  border: 0.5px solid #CCD5E1;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+
+  & .rbc-btn-item {
+    padding: 1rem;
+    border-right: 0.5px solid #CCD5E1;
+    min-width: 8rem;
+    text-align: center;
+  }
+
+  & .rbc-btn-active {
+    background: #EAF1FE;
+  }
+
+  & .rbc-btn-item:last-child:not(:first-child) {
+    border-right: unset;
+  }
+
 
   > button:first-child:not(:last-child) {
     border-top-right-radius: 0;

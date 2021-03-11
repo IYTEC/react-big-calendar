@@ -35,7 +35,8 @@ class Toolbar extends React.Component {
 
         <span className="rbc-toolbar-label">{label}</span>
 
-        <span className="rbc-btn-group">{this.viewNamesGroup(messages)}</span>
+        {/* <span className="rbc-btn-group">{this.viewNamesGroup(messages)}</span> */}
+        <div className="rbc-btn-group">{this.viewNamesGroup(messages)}</div>
       </div>
     )
   }
@@ -53,15 +54,25 @@ class Toolbar extends React.Component {
     const view = this.props.view
 
     if (viewNames.length > 1) {
+      // return viewNames.map(name => (
+      //   <button
+      //     type="button"
+      //     key={name}
+      //     className={clsx({ 'rbc-active': view === name })}
+      //     onClick={this.view.bind(null, name)}
+      //   >
+      //     {messages[name]}
+      //   </button>
+      // ))
       return viewNames.map(name => (
-        <button
+        <div
           type="button"
           key={name}
-          className={clsx({ 'rbc-active': view === name })}
+          className={clsx('rbc-btn-item', { 'rbc-btn-active': view === name })}
           onClick={this.view.bind(null, name)}
         >
           {messages[name]}
-        </button>
+        </div>
       ))
     }
   }
