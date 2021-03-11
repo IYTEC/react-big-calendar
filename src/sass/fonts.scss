@@ -3,25 +3,26 @@
 
 @font-face {
   font-family: MuliLight;
-  src: url('./Muli-Light.ttf');
+  // src: url('./font/Muli-Light.ttf');
+  src: url('/src/font/Muli-Light.ttf');
 }
 
 @font-face {
   font-family: MuliRegular;
-  src: url('./Muli.ttf');
+  src: url('/src/font/Muli.ttf');
 }
 
 @font-face {
   font-family: MuliSemiBold;
-  src: url('./Muli-SemiBold.ttf') format("truetype");
+  src: url('/src/font/Muli-SemiBold.ttf') format("truetype");
 }
 
 @font-face {
   font-family: MuliBold;
-  src: url('./Muli-Bold.ttf');
+  src: url('/src/font/Muli-Bold.ttf');
 }
 
 @font-face {
   font-family: MuliBlack;
-  src: url('./Muli\ Black.ttf');
+  src: url('/src/font/Muli\ Black.ttf');
 }
