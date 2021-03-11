@@ -1,6 +1,7 @@
 import * as dates from '../utils/dates'
-import oldGlobalize from './oldGlobalize'
+
 import { DateLocalizer } from '../localizer'
+import oldGlobalize from './oldGlobalize'
 
 let dateRangeFormat = ({ start, end }, culture, local) =>
   local.format(start, { date: 'short' }, culture) +
@@ -36,7 +37,7 @@ export let formats = {
   timeGutterFormat: { time: 'short' },
 
   monthHeaderFormat: 'MMMM yyyy',
-  dayHeaderFormat: 'eeee MMM dd',
+  // dayHeaderFormat: 'eeee MMM dd',
   dayRangeHeaderFormat: weekRangeFormat,
   agendaHeaderFormat: dateRangeFormat,
 

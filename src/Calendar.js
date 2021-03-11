@@ -1,28 +1,27 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import { uncontrollable } from 'uncontrollable'
-import clsx from 'clsx'
 import {
+  DayLayoutAlgorithmPropType,
   accessor,
+  views as componentViews,
   dateFormat,
   dateRangeFormat,
-  DayLayoutAlgorithmPropType,
-  views as componentViews,
 } from './utils/propTypes'
-
-import { notify } from './utils/helpers'
 import { navigate, views } from './utils/constants'
+
+import NoopWrapper from './NoopWrapper'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Toolbar from './Toolbar'
+import VIEWS from './Views'
+import clsx from 'clsx'
+import defaults from 'lodash/defaults'
+import mapValues from 'lodash/mapValues'
 import { mergeWithDefaults } from './localizer'
 import message from './utils/messages'
 import moveDate from './utils/move'
-import VIEWS from './Views'
-import Toolbar from './Toolbar'
-import NoopWrapper from './NoopWrapper'
-
+import { notify } from './utils/helpers'
 import omit from 'lodash/omit'
-import defaults from 'lodash/defaults'
 import transform from 'lodash/transform'
-import mapValues from 'lodash/mapValues'
+import { uncontrollable } from 'uncontrollable'
 import { wrapAccessor } from './utils/accessors'
 
 function viewNames(_views) {
@@ -897,7 +896,6 @@ class Calendar extends React.Component {
 
   getView = () => {
     const views = this.getViews()
-
     return views[this.props.view]
   }
 
