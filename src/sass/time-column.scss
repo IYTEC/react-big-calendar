@@ -7,12 +7,14 @@
 
   .rbc-timeslot-group {
     flex: 1;
+    // border-bottom: unset;
   }
 }
 
 
 .rbc-timeslot-group {
-  border-bottom: 1px solid $cell-border;
+  // border-bottom: 1px solid $cell-border;
+  border-top: 1px solid #DDDEEA;
   min-height: 40px;
   display: flex;
   flex-flow: column nowrap;
@@ -21,6 +23,13 @@
 .rbc-time-gutter,
 .rbc-header-gutter {
   flex: none;
+}
+
+.rbc-time-gutter {
+
+  .rbc-timeslot-group {
+    border-top: unset;
+  }
 }
 
 .rbc-label {
@@ -76,7 +85,7 @@
   }
 
   .rbc-time-slot {
-    border-top: 1px solid lighten($cell-border, 10%);
+    // border-top: 1px solid lighten($cell-border, 10%);
   }
 }
 

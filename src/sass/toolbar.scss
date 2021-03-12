@@ -19,6 +19,48 @@ $active-border: darken($btn-border, 12%);
     text-align: center;
   }
 
+  & .group-select-wrapper {
+    display: flex;
+    font-size: 14px;
+    background: #FFFFFF;
+    border: 0.5px solid #CCD5E1;
+    border-radius: 4px;
+    align-items: center;
+    min-width: 20rem;
+    justify-content: center;
+    margin-right: 2rem;
+
+    & .group-select-title {
+      color: #5A687A;
+      background: #F9F9FF;
+      box-sizing: border-box;
+      border-radius: 4px 0 0 4px;
+      padding: 1rem;
+      text-align: center;
+      border-right: 0.5px solid #CCD5E1;
+      flex: 1 0 auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    & .group-select {
+      border: unset;
+      width: 70%;
+      appearance: none;
+      // webkit-appearance: none;
+      -moz-appearance: none;
+      background: transparent;
+      // background-image: url(${assetBaseUrl}icon-dropdown_b5vxpw.svg');
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-position-y: center;
+      margin-right: 0.8rem;
+      padding: 1rem;
+      margin-left: 0.5rem;
+    }
+  }
+
   & button {
     color: $btn-color;
     display: inline-block;
