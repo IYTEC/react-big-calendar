@@ -6,10 +6,19 @@ $active-border: darken($btn-border, 12%);
 .rbc-toolbar {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
   font-size: 16px;
+
+  .rbc-filtering {
+    display: flex;
+  }
+
+  .rbc-labelncontrol {
+    display: flex;
+    align-items: center;
+  }
 
   .rbc-toolbar-label {
     flex-grow:1;
@@ -132,7 +141,6 @@ $active-border: darken($btn-border, 12%);
   & .rbc-btn-item:last-child:not(:first-child) {
     border-right: unset;
   }
-
 
   > button:first-child:not(:last-child) {
     border-top-right-radius: 0;

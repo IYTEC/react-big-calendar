@@ -1,8 +1,8 @@
-import clsx from 'clsx'
-import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 import BackgroundWrapper from './BackgroundWrapper'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 export default class TimeSlotGroup extends Component {
   render() {
@@ -14,7 +14,7 @@ export default class TimeSlotGroup extends Component {
       components: { timeSlotWrapper: Wrapper = BackgroundWrapper } = {},
     } = this.props
 
-	const groupProps = getters ? getters.slotGroupProp() : {}
+    const groupProps = getters ? getters.slotGroupProp() : {}
     return (
       <div className="rbc-timeslot-group" {...groupProps}>
         {group.map((value, idx) => {

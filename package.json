@@ -129,6 +129,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.5",
+    "@mdi/js": "^5.9.55",
+    "@mdi/react": "^1.4.0",
     "clsx": "^1.0.4",
     "date-arithmetic": "^4.1.0",
     "dom-helpers": "^5.1.0",

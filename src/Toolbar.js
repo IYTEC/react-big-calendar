@@ -1,7 +1,10 @@
+import { mdiMenuLeft, mdiMenuRight } from '@mdi/js'
+
+import Icon from '@mdi/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import clsx from 'clsx'
-// import { navigate } from './utils/constants'
+import { navigate } from './utils/constants'
 
 class Toolbar extends React.Component {
   render() {
@@ -12,38 +15,40 @@ class Toolbar extends React.Component {
 
     return (
       <div className="rbc-toolbar">
-        <div className="group-select-wrapper mr-1">
-          <div className="group-select-title">Status</div>
-          <select
-            className="group-select"
-            // onChange={e => console.log(e.target.value)}
-          >
-            <option className="group-select-item" value="all">
-              All
-            </option>
-            <option className="group-select-item" value="1">
-              Draft
-            </option>
-            <option className="group-select-item" value="3">
-              Published
-            </option>
-            <option className="group-select-item" value="2">
-              Repeating
-            </option>
-          </select>
-        </div>
+        <div className="rbc-filtering">
+          <div className="group-select-wrapper mr-1">
+            <div className="group-select-title">Status</div>
+            <select
+              className="group-select"
+              // onChange={e => console.log(e.target.value)}
+            >
+              <option className="group-select-item" value="all">
+                All
+              </option>
+              <option className="group-select-item" value="1">
+                Draft
+              </option>
+              <option className="group-select-item" value="3">
+                Published
+              </option>
+              <option className="group-select-item" value="2">
+                Repeating
+              </option>
+            </select>
+          </div>
 
-        <div className="group-select-wrapper">
-          <div className="group-select-title">Sort</div>
-          <select
-            className="group-select"
-            // onChange={e => console.log(e.target.value)}
-          >
-            <option value="all">None</option>
-            <option value="all">Employee</option>
-            <option value="1">Groups</option>
-            <option value="3">Jobs</option>
-          </select>
+          <div className="group-select-wrapper">
+            <div className="group-select-title">Sort</div>
+            <select
+              className="group-select"
+              // onChange={e => console.log(e.target.value)}
+            >
+              <option value="all">None</option>
+              <option value="all">Employee</option>
+              <option value="1">Groups</option>
+              <option value="3">Jobs</option>
+            </select>
+          </div>
         </div>
 
         {/* <div className="mar-r-2">
@@ -93,17 +98,34 @@ class Toolbar extends React.Component {
             {messages.next}
           </div>
         </div> */}
+        <div className="rbc-labelncontrol">
+          <span className="rbc-toolbar-label">{label}</span>
 
-        <span className="rbc-toolbar-label">{label}</span>
+          <Icon
+            path={mdiMenuLeft}
+            onClick={this.navigate.bind(null, navigate.NEXT)}
+            title="Next"
+            size={2}
+            color="red"
+          />
+          <span onClick={this.navigate.bind(null, navigate.TODAY)}>Today</span>
+          <Icon
+            path={mdiMenuRight}
+            onClick={this.navigate.bind(null, navigate.PREVIOUS)}
+            title="Previous"
+            size={2}
+            color="red"
+          />
+        </div>
 
         <div className="rbc-btn-group">{this.viewNamesGroup(messages)}</div>
       </div>
     )
   }
 
-  // navigate = action => {
-  //   this.props.onNavigate(action)
-  // }
+  navigate = action => {
+    this.props.onNavigate(action)
+  }
 
   view = view => {
     this.props.onView(view)
