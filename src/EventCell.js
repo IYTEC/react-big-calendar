@@ -1,8 +1,10 @@
 import * as dates from './utils/dates'
 
+import Icon from '@mdi/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import clsx from 'clsx'
+import { mdiDotsVertical } from '@mdi/js'
 
 class EventCell extends React.Component {
   render() {
@@ -40,21 +42,35 @@ class EventCell extends React.Component {
     let userProps = getters.eventProp(event, start, end, selected)
 
     const content = (
-      <div className="rbc-event-content" title={tooltip || undefined}>
-        {Event ? (
-          <Event
-            event={event}
-            continuesPrior={continuesPrior}
-            continuesAfter={continuesAfter}
-            title={title}
-            isAllDay={allDay}
-            localizer={localizer}
-            slotStart={slotStart}
-            slotEnd={slotEnd}
+      <div
+        style={{ display: 'flex', justifyContent: 'space-between' }}
+        title={tooltip || undefined}
+      >
+        <div className="rbc-event-content" style={{ width: '50%' }}>
+          {Event ? (
+            <Event
+              event={event}
+              continuesPrior={continuesPrior}
+              continuesAfter={continuesAfter}
+              title={title}
+              isAllDay={allDay}
+              localizer={localizer}
+              slotStart={slotStart}
+              slotEnd={slotEnd}
+            />
+          ) : (
+            title
+          )}
+        </div>
+        <div>
+          <Icon
+            path={mdiDotsVertical}
+            // onClick={this.navigate.bind(null, navigate.NEXT)}
+            title="Menu"
+            size={2}
+            color="#A9ACC2"
           />
-        ) : (
-          title
-        )}
+        </div>
       </div>
     )
 
