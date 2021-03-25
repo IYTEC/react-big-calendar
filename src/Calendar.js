@@ -782,7 +782,7 @@ class Calendar extends React.Component {
     popup: false,
     toolbar: true,
     view: views.MONTH,
-    views: [views.MONTH, views.WEEK, views.DAY, views.AGENDA],
+    views: [views.DAY, views.WEEK, views.MONTH],
     step: 30,
     length: 30,
 
@@ -805,11 +805,11 @@ class Calendar extends React.Component {
 
   constructor(...args) {
     super(...args)
-
     this.state = {
       context: this.getContext(this.props),
     }
   }
+
   UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({ context: this.getContext(nextProps) })
   }

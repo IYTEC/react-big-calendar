@@ -12,7 +12,6 @@ class Toolbar extends React.Component {
       localizer: { messages },
       label,
     } = this.props
-
     return (
       <div className="rbc-toolbar">
         <div className="rbc-filtering">
