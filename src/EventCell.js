@@ -43,10 +43,14 @@ class EventCell extends React.Component {
 
     const content = (
       <div
-        style={{ display: 'flex', justifyContent: 'space-between' }}
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
         title={tooltip || undefined}
       >
-        <div className="rbc-event-content" style={{ width: '50%' }}>
+        <div className="rbc-event-content">
           {Event ? (
             <Event
               event={event}
@@ -62,12 +66,18 @@ class EventCell extends React.Component {
             title
           )}
         </div>
-        <div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
           <Icon
             path={mdiDotsVertical}
             // onClick={this.navigate.bind(null, navigate.NEXT)}
             title="Menu"
-            size={2}
+            size={1.5}
             color="#A9ACC2"
           />
         </div>

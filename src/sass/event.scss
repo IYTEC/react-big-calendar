@@ -16,6 +16,7 @@
   box-sizing: border-box;
   box-shadow: 4px 4px 24px 1px rgba(218, 223, 234, 0.25);
   border-radius: 8px;
+  min-height: 3rem;
 
   .rbc-slot-selecting & {
     cursor: inherit;

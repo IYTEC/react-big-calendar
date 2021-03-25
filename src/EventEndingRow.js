@@ -1,6 +1,6 @@
+import EventRowMixin from './EventRowMixin'
 import PropTypes from 'prop-types'
 import React from 'react'
-import EventRowMixin from './EventRowMixin'
 import { eventLevels } from './utils/eventLevels'
 import range from 'lodash/range'
 
@@ -32,6 +32,7 @@ class EventEndingRow extends React.Component {
       }
 
       let gap = Math.max(0, left - lastEnd)
+      // console.log(left, lastEnd, 'gap', gap)
 
       if (this.canRenderSlotEvent(left, span)) {
         let content = EventRowMixin.renderEvent(this.props, event)
