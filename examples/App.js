@@ -157,12 +157,12 @@ class Example extends React.Component {
             <Current localizer={globalizeLocalizer} />
           </div>
         </div>
-        <div className="docs">
-          {/* <div className="contain section">
+        {/* <div className="docs">
+          <div className="contain section">
             <Intro />
           </div>
-          <Api className="contain section" /> */}
-        </div>
+          <Api className="contain section" />
+        </div> */}
       </div>
     )
   }
