@@ -8,12 +8,29 @@ $active-border: darken($btn-border, 12%);
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 3rem;
   // font-size: 16px;
 
   .rbc-filtering {
     display: flex;
   }
+
+  &-nav-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &-today-btn {
+    background: #FFFFFF;
+    border: 0.5px solid #CCD5E1;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  
 
   .rbc-labelncontrol {
     display: flex;

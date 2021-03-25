@@ -102,23 +102,32 @@ class Toolbar extends React.Component {
           <span className="rbc-toolbar-label">{label}</span>
 
           <Icon
+            style={{ opacity: '0.5' }}
             path={mdiMenuLeft}
             onClick={this.navigate.bind(null, navigate.NEXT)}
             title="Next"
             size={2}
-            color="red"
+            color="#5A687A"
           />
-          <span onClick={this.navigate.bind(null, navigate.TODAY)}>Today</span>
+          {/* <span onClick={this.navigate.bind(null, navigate.TODAY)}>Today</span> */}
           <Icon
+            style={{ opacity: '0.5' }}
             path={mdiMenuRight}
             onClick={this.navigate.bind(null, navigate.PREVIOUS)}
             title="Previous"
             size={2}
-            color="red"
+            color="#5A687A"
           />
         </div>
 
-        <div className="rbc-btn-group">{this.viewNamesGroup(messages)}</div>
+        <div className="rbc-toolbar-nav-wrapper">
+          <div className="rbc-toolbar-today-btn">
+            <span onClick={this.navigate.bind(null, navigate.TODAY)}>
+              Today
+            </span>
+          </div>
+          <div className="rbc-btn-group">{this.viewNamesGroup(messages)}</div>
+        </div>
       </div>
     )
   }
